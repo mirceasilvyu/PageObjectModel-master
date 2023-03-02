@@ -5,6 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class FirstPage extends PageObject {
     private final String SEARCH_PRODUCT="jbl boom box 2";
+    private final String SEARCH_PRODUCT2="LENOVO LEGION 5";
 
     FirstPage(WebDriver driver)
     {
@@ -18,9 +19,14 @@ public class FirstPage extends PageObject {
     @FindBy(xpath = "//*[@id=\'icp-nav-flyout\']/span/span[2]/span[1]")
     private WebElement changeCurency;
 
+
+
     public void populateSearchField(){this.searchBar.sendKeys(SEARCH_PRODUCT);}
+    public void populateSearchField2(){this.searchBar.sendKeys(SEARCH_PRODUCT2);}
     public void clickSearchBar(){this.searchButton.click();}
     public void clickOnChangeCurency(){this.changeCurency.click();}
+
+
 
 
 }

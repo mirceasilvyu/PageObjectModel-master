@@ -9,7 +9,7 @@ public class ThirdPage extends PageObject {
         super(driver);
     }
 
-    @FindBy(xpath = "//*[@id=\'add-to-cart-button\']")
+    @FindBy(css = "#add-to-cart-button")
     private WebElement buyProduct;
     @FindBy(xpath = "//*[@id=\'sw-gtc\']/span/a")
     private WebElement goToCart;
@@ -23,6 +23,8 @@ public class ThirdPage extends PageObject {
     private WebElement proceedToCheckOut;
     @FindBy(xpath = "//*[@id=\'a-page\']/div[1]/div[4]/div[2]/a[3]")
     private WebElement helpAmazon;
+    @FindBy(xpath = "//*[@id=\'sc-active-cart\']/div/div/div/h1")
+    private WebElement emptyCart;
 
     public void clickOnBuyMyProduct() {this.buyProduct.click();}
     public void clickOnMyCart(){this.goToCart.click();}
@@ -31,6 +33,7 @@ public class ThirdPage extends PageObject {
     public void clickOnQuanitity7(){this.quantity7.click();}
     public void clickOnProceedToCheckOut(){this.proceedToCheckOut.click();}
     public void clickOnHelpAmazon(){this.helpAmazon.click();}
+    public String clickemptyCart(){ return emptyCart.getText();}
 //
 
 
