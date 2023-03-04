@@ -9,32 +9,20 @@ public class ThirdPage extends PageObject {
         super(driver);
     }
 
-    @FindBy(css = "#add-to-cart-button")
-    private WebElement buyProduct;
-    @FindBy(xpath = "//*[@id=\'sw-gtc\']/span/a")
-    private WebElement goToCart;
-    @FindBy(xpath = "//*[@id=\'a-autoid-0-announce\']")
-    private WebElement quantity;
-    @FindBy(xpath = "//*[@id=\'quantity_0\']")
-    private WebElement quantity0;
-    @FindBy(xpath = "//*[@id=\'quantity_7\']")
-    private WebElement quantity7;
-    @FindBy(xpath = "//*[@id=\'sc-buy-box-ptc-button\']/span/input")
-    private WebElement proceedToCheckOut;
-    @FindBy(xpath = "//*[@id=\'a-page\']/div[1]/div[4]/div[2]/a[3]")
-    private WebElement helpAmazon;
-    @FindBy(xpath = "//*[@id=\'sc-active-cart\']/div/div/div/h1")
-    private WebElement emptyCart;
+    @FindBy(css = "#entry_216842 ")
+    private WebElement addToCartProduct;
+    @FindBy(xpath = "//*[@id=\'column-right\']/div/a[14]")
+    private WebElement logMeOutButton;
+    @FindBy(css = "#content > p:nth-child(3)")
+    private WebElement verifyLogMeOut;
+    @FindBy(xpath = "//*[@id=\'account-login\']/div[1]")
+    private WebElement wrongPassword;
 
-    public void clickOnBuyMyProduct() {this.buyProduct.click();}
-    public void clickOnMyCart(){this.goToCart.click();}
-    public void clickOnQuantity(){this.quantity.click();}
-    public void clickOnQuantity1(){this.quantity0.click();}
-    public void clickOnQuanitity7(){this.quantity7.click();}
-    public void clickOnProceedToCheckOut(){this.proceedToCheckOut.click();}
-    public void clickOnHelpAmazon(){this.helpAmazon.click();}
-    public String clickemptyCart(){ return emptyCart.getText();}
-//
+
+public void clickOnAddToCart(){this.addToCartProduct.click();}
+public void clickLogMeOutButton(){this.logMeOutButton.click();}
+    public String clickVerifyLogMeOut(){return verifyLogMeOut.getText();}
+    public String clickVerifyWrongPassword(){return wrongPassword.getText();}
 
 
 }
